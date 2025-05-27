@@ -1,223 +1,61 @@
-/* Reset básico */
+/* Reset básico para garantir que todos os navegadores renderizem o layout de forma consistente */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos Globais */
+/* Definindo o estilo do corpo da página */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
+    margin: 20px;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #006400;  /* Verde mais forte */
+    background-color: #4CAF50;
     color: white;
+    padding: 10px 0;
     text-align: center;
-    padding: 70px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-bottom: 5px solid #004d26;
-    position: relative;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+    font-size: 2.5em;
 }
 
 header p {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.2em;
 }
 
-/* Seção Hero */
-.hero {
-    background-image: url('https://source.unsplash.com/1600x900/?field,city');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 1s ease-out;
+/* Estilizando as seções */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero:hover {
-    transform: scale(1.05);  /* Efeito suave de zoom quando passa o mouse */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);  /* Semitransparente para dar contraste */
+ul {
+    list-style-type: none;
 }
 
-.hero-text {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 1.6rem;
-    width: 60%;
-    margin: 0 auto;
-}
-
-.hero .btn {
-    background-color: #ff6600;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hero .btn:hover {
-    background-color: #ff9933;
-    transform: scale(1.1); /* Efeito de escala no botão */
-}
-
-/* Seção Sobre */
-.sobre {
-    background-color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-}
-
-.sobre h2 {
-    font-size: 2.8rem;
-    margin-bottom: 30px;
-    color: #005b47;
-}
-
-.sobre p {
-    font-size: 1.3rem;
-    width: 70%;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-/* Seção de Eventos */
-.eventos {
-    background: linear-gradient(135deg, #00b3b3, #005b47);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.eventos h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-}
-
-.eventos p {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-}
-
-.evento-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding-top: 40px;
-    animation: fadeInUp 1.2s ease-out; /* Animação de entrada */
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card {
-    background-color: #ffffff;
-    color: #333;
-    border-radius: 15px;
-    padding: 30px;
-    width: 300px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.card i {
-    font-size: 3rem;
-    color: #005b47;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-
-.card:hover i {
-    color: #ff6600;
-}
-
-.card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.card p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+ul li {
+    margin-bottom: 10px;
 }
 
 /* Rodapé */
 footer {
+    text-align: center;
+    padding: 10px;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Estilos de ícones */
-.fas {
-    font-size: 50px;
-    transition: transform 0.3s ease;
-}
-
-.card:hover .fas {
-    transform: rotate(10deg); /* Efeito de rotação nos ícones ao passar o mouse */
 }
