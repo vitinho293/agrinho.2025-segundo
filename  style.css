@@ -73,3 +73,156 @@ footer {
     padding: 20px;
     text-align: center;
 }
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #005b47;  /* Verde mais forte */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+/* Seção Hero */
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?field,city');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);  /* Semitransparente para dar contraste */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Sobre o evento */
+.sobre {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #005b47;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Eventos */
+.eventos {
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.eventos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.eventos p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.evento-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1rem;
+}
