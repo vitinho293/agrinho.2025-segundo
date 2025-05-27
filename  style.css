@@ -21,6 +21,7 @@ header {
     padding: 70px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 5px solid #004d26;
+    position: relative;
 }
 
 header h1 {
@@ -47,6 +48,11 @@ header p {
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: transform 1s ease-out;
+}
+
+.hero:hover {
+    transform: scale(1.05);  /* Efeito suave de zoom quando passa o mouse */
 }
 
 .hero::before {
@@ -86,11 +92,12 @@ header p {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 30px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero .btn:hover {
     background-color: #ff9933;
+    transform: scale(1.1); /* Efeito de escala no botão */
 }
 
 /* Seção Sobre */
@@ -98,6 +105,7 @@ header p {
     background-color: #ffffff;
     padding: 80px 20px;
     text-align: center;
+    position: relative;
 }
 
 .sobre h2 {
@@ -119,6 +127,8 @@ header p {
     color: white;
     padding: 80px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .eventos h2 {
@@ -137,6 +147,18 @@ header p {
     gap: 30px;
     flex-wrap: wrap;
     padding-top: 40px;
+    animation: fadeInUp 1.2s ease-out; /* Animação de entrada */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card {
@@ -148,6 +170,7 @@ header p {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .card:hover {
@@ -184,4 +207,17 @@ footer {
     text-align: center;
     padding: 40px 20px;
     font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos de ícones */
+.fas {
+    font-size: 50px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .fas {
+    transform: rotate(10deg); /* Efeito de rotação nos ícones ao passar o mouse */
 }
