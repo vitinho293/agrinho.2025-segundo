@@ -7,15 +7,14 @@
 
 /* Corpo do site */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.8;
     margin: 0;
-    font-size: 1rem;
 }
 
-/* Container para centralizar o conteúdo */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -25,59 +24,94 @@ body {
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(to right, #4CAF50, #388E3C);
+    background: linear-gradient(135deg, #388E3C, #4CAF50);
     color: white;
-    padding: 60px 20px;
-    border-radius: 15px;
-    margin-bottom: 60px;
+    padding: 80px 20px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 4em;
-    font-weight: 700;
+    font-family: 'Sacramento', cursive;
+    font-size: 4.5em;
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: lighter;
 }
 
 /* Seções */
 .section {
-    margin-bottom: 60px;
-    padding: 40px 20px;
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 60px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
-    font-size: 2.6em;
+    font-size: 2.8em;
     color: #388E3C;
     margin-bottom: 30px;
     font-weight: bold;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #333;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     line-height: 1.8;
     color: #555;
 }
 
 /* Imagens */
 .imagem-evento, .imagem-atividade {
-    max-width
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.imagem-evento:hover, .imagem-atividade:hover {
+    transform: scale(1.05);
+}
+
+/* Botão de participação */
+.btn-participar {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-participar:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #388E3C;
+    color: white;
+    padding: 20px;
+   
